@@ -1,0 +1,56 @@
+from collections import UserDict
+
+
+
+def error_handler(func):
+    def inner(*args, **kwargs):
+        try:
+            result = func(*args, **kwargs)
+            return result
+        except KeyError:
+            return 'No user with this name'
+        except ValueError:
+            return 'Give me name and phone please'
+        except IndexError:
+            return 'Enter user name'
+    return inner
+
+
+class MyDict(UserDict):
+    def __setitem__(self, name, phone):
+        name =name.lower()
+        super().__setitem__(name, phone)
+
+
+@error_handler
+def hello():
+    return "How can I help you?"
+
+
+def create_table():
+    table = MyDict({"name": "Jonny", "phone": "123456"})
+
+
+
+
+def save_user(name, telephone):
+    pass
+
+
+
+def get_all_users():
+    pass
+
+
+
+def get_telephone_user():
+    pass
+
+
+
+def update_user(name, telephone):
+    pass
+
+
+if __name__ == '__main__':
+    print("htllo world")

@@ -1,4 +1,4 @@
-from collections import UserDict
+
 
 
 
@@ -16,20 +16,16 @@ def error_handler(func):
     return inner
 
 
-class MyDict(UserDict):
-    def __setitem__(self, name, phone):
-        name =name.lower()
-        super().__setitem__(name, phone)
-
-
 @error_handler
+def create_table():
+    global my_dict
+    my_dict = {}
+    return my_dict
+
+
+
 def hello():
     return "How can I help you?"
-
-
-def create_table():
-    table = MyDict({"name": "Jonny", "phone": "123456"})
-
 
 
 
@@ -39,18 +35,21 @@ def save_user(name, telephone):
 
 
 def get_all_users():
-    pass
+    my_dict.items()
+    return my_dict
 
 
 
 def get_telephone_user():
-    pass
+    my_dict.get()
+    return my_dict
 
 
 
 def update_user(name, telephone):
+    # my_dict.update({})
     pass
 
 
 if __name__ == '__main__':
-    print("htllo world")
+    print("hello world")

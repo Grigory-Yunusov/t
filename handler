@@ -30,7 +30,8 @@ def hello():
 
 
 def save_user(name, telephone):
-    pass
+    if name.title() in my_dict:
+
 
 
 

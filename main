@@ -1,16 +1,15 @@
-
+from parser impot parser
 
 def user_input(user):
     game = True
     if user
 
         good_bye = ["good bye", "close", "exit"]
-        if user == range(good_bye):
-            print("Good bye!")
-            game = False
-    else:
-        print("input is not correct!!!")
-
+         if user in good_bye:
+             print("Good bye!")
+             game = False
+         else:
+             parser(user)
     return game
 
 def main():

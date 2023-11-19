@@ -1,0 +1,23 @@
+from parser impot parser
+
+def user_input(user):
+    game = True
+    if user
+
+        good_bye = ["good bye", "close", "exit"]
+         if user in good_bye:
+             print("Good bye!")
+             game = False
+         else:
+             parser(user)
+    return game
+
+def main():
+    gameloop = True
+    while gameloop:
+        print('ask me:')
+        rep = input().lower()
+        gameloop = user_input(rep)
+
+if __name__ == '__main__':
+    print("htllo world")
